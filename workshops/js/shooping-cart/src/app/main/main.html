@@ -11,11 +11,12 @@
   <div class="row">
     <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
       <div class="thumbnail">
-        <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
+        <img class="pull-right" ng-src="{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
         <div class="caption">
           <h3>{{ awesomeThing.title }}</h3>
           <p>{{ awesomeThing.description }}</p>
-          <p><a ng-href="{{awesomeThing.url}}">{{ awesomeThing.url }}</a></p>
+          <p><a ng-href="{{awesomeThing.url}}" target="_blank">Más información ...</a></p>
+          <button class="btn btn-default add" type="submit">Agregar</button>
         </div>
       </div>
     </div>

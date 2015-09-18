@@ -6,9 +6,13 @@
 }
 
 .thumbnail {
-  height: 200px;
+  height: 280px;
 }
 
 .thumbnail img.pull-right {
   width: 50px;
+}
+
+.add {
+  float: right;
 }
