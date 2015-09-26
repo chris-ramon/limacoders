@@ -9,13 +9,13 @@
   </div>
 
   <div class="row">
-    <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
+    <div class="col-sm-6 col-md-4" ng-repeat="product in main.ProductService.products">
       <div class="thumbnail">
-        <img class="pull-right" ng-src="{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
+        <img class="pull-right" ng-src="{{ ::product.logo }}" alt="{{ ::product.title }}">
         <div class="caption">
-          <h3>{{ awesomeThing.title }}</h3>
-          <p>{{ awesomeThing.description }}</p>
-          <p><a ng-href="{{awesomeThing.url}}" target="_blank">Más información ...</a></p>
+          <h3>{{ ::product.title }}</h3>
+          <p>{{ ::product.description }}</p>
+          <p><a ng-href="{{::product.url}}" target="_blank">Más información ...</a></p>
           <button class="btn btn-default add" type="submit">Agregar</button>
         </div>
       </div>
