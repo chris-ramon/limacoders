@@ -10,13 +10,13 @@
         <div class="product panel panel-default" >
           <div class="panel-body">
             <h4 class='title'>
-              <a ng-href="{{::product.url}}" target="_blank">{{::product.title}}</a>
+              <a ng-href="{{::product.url}}" target="_blank"></a>
             </h4>
             <div class='image'>
               <img ng-src="{{ ::product.logo }}" alt="{{ ::product.title }}">
             </div>
             <button
-              ng-click='main.CartService.add(product)'
+              ng-click=''
               class="add btn btn-default">
               Add
             </button>
@@ -29,7 +29,7 @@
           <div class="panel-body">
             <h4>Cart</h4>
             <ul>
-              <li ng-repeat='product in main.CartService.cart.products'>
+              <li ng-repeat=''>
                 {{product.quantity}} - {{product.title}} - <a ng-click='main.CartService.remove(product)' ng-href="#">Remove</a>
               </li>
             </ul>
