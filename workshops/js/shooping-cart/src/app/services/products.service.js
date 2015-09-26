@@ -5,6 +5,11 @@
   function ProductService() {
     var self = this;
     self.products = products;
+    self.init = function() {
+      _.each(self.products, function(product) {
+        product.id = _.uniqueId();
+      });
+    };
   }
   var products = [
     {
